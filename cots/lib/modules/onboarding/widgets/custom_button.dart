@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity, // Tombol mengambil lebar penuh
+      width: double.infinity, 
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -26,16 +26,16 @@ class CustomButton extends StatelessWidget {
               ? null
               : BorderSide(color: AppColors.primaryGreen, width: 2),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25), // Radius bulat
+            borderRadius: BorderRadius.circular(25), 
           ),
-          minimumSize: const Size(0, 50), // Ukuran minimum untuk tinggi tombol
-          padding: const EdgeInsets.symmetric(horizontal: 16), // Padding horizontal
-          elevation: isPrimary ? 4 : 0, // Elevasi untuk tombol solid
+          minimumSize: const Size(0, 50), 
+          padding: const EdgeInsets.symmetric(horizontal: 16), 
+          elevation: isPrimary ? 4 : 0, 
         ),
         child: Text(
           text,
           style: TextStyle(
-            fontSize: 16, // Ukuran font tombol
+            fontSize: 16, 
             color: isPrimary ? Colors.white : AppColors.primaryGreen,
             fontWeight: FontWeight.bold,
           ),

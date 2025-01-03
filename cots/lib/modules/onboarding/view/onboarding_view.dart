@@ -8,18 +8,20 @@ class OnboardingView extends StatelessWidget {
   final List<Map<String, String>> onboardingData = [
     {
       'image': 'assets/image/onboard1.png',
-      'title': 'Selamat datang di aplikasi!',
-      'description': 'Aplikasi yang membuat hidup Anda lebih mudah.',
+      'title': 'Selamat datang di Gojek',
+      'description': '''Aplikasi yang bikin hidupmu lebih nyaman. Siap
+bantuin semua kebutuhan mu, kapanpun, dan di manapun''',
     },
     {
       'image': 'assets/image/onboard2.png',
-      'title': 'Transportasi Mudah',
-      'description': 'Pesan transportasi hanya dengan beberapa klik.',
+      'title': 'Transportasi & logistik',
+      'description': '''Antarin kamu jalan atau ambilin barang lebih
+gampang tinggal ngeklik doang~''',
     },
     {
       'image': 'assets/image/onboard3.png',
-      'title': 'Belanja Cepat',
-      'description': 'Belanja kebutuhan Anda dengan mudah.',
+      'title': 'Pesan makan & belanja',
+      'description': 'Lagi ngidam sesuatu? Gojek beliin gak pakai lama.',
     },
   ];
 
@@ -43,6 +45,7 @@ class OnboardingView extends StatelessWidget {
                     Text(
                       onboardingData[index]['title']!,
                       style: TextStyle(
+                        fontFamily: 'Sf-Pro-Text-Bold',
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textBlack,
@@ -52,7 +55,11 @@ class OnboardingView extends StatelessWidget {
                     Text(
                       onboardingData[index]['description']!,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: AppColors.textGrey),
+                      style: TextStyle(
+                        fontFamily: 'SF-Pro-Text-light',
+                        fontSize: 16,
+                        color: AppColors.textGrey,
+                      ),
                     ),
                   ],
                 );
@@ -83,7 +90,6 @@ class OnboardingView extends StatelessWidget {
           CustomButton(
             text: "Masuk",
             onPressed: () {
-
               Get.toNamed('/login');
             },
           ),
@@ -91,7 +97,6 @@ class OnboardingView extends StatelessWidget {
           CustomButton(
             text: "Belum ada akun?, Daftar dulu",
             onPressed: () {
-              // Navigasi ke halaman daftar
               Get.toNamed('/register');
             },
             isPrimary: false,
