@@ -5,6 +5,8 @@ import '../widgets/custom_button.dart';
 import 'package:cots/design_system/app_color.dart';
 
 class OnboardingView extends StatelessWidget {
+
+
   final List<Map<String, String>> onboardingData = [
     {
       'image': 'assets/image/onboard1.png',
@@ -28,7 +30,6 @@ gampang tinggal ngeklik doang~''',
   @override
   Widget build(BuildContext context) {
     final OnboardingController controller = Get.find();
-
     return Scaffold(
       body: Column(
         children: [
@@ -97,7 +98,7 @@ gampang tinggal ngeklik doang~''',
           CustomButton(
             text: "Belum ada akun?, Daftar dulu",
             onPressed: () {
-              Get.toNamed('/register');
+              Get.toNamed('/login');
             },
             isPrimary: false,
           ),
