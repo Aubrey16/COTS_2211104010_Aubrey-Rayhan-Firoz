@@ -6,19 +6,19 @@ class PromoView extends StatelessWidget {
       "image": "assets/image/card1.png",
       "title": "Makin Seru",
       "description": "Sambungkan Akun ke Tokopedia, Banyak Untung",
-      "icon": "assets/icons/promo.png"
+      "icon": "assets/icons/language.png"
     },
     {
       "image": "assets/image/card2.png",
       "title": "Bayar Apa Aja",
       "description": "Bayar lebih hemat pakai Gopay",
-      "icon": "assets/icons/gopay.png"
+      "icon": "assets/icons/language.png"
     },
     {
       "image": "assets/image/card3.png",
       "title": "Promo Belanja",
       "description": "Promo cashback hingga Rp100.000",
-      "icon": "assets/icons/shop.png"
+      "icon": "assets/icons/language.png"
     },
   ];
 

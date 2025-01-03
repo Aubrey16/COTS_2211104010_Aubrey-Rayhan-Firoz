@@ -5,13 +5,13 @@ import '../controller/main_controller.dart';
 class HomeView extends StatelessWidget {
   final List<String> icons = [
     "assets/icons/language.png",
-    "assets/icons/placeholder.png",
-    "assets/icons/placeholder.png",
-    "assets/icons/placeholder.png",
-    "assets/icons/placeholder.png",
-    "assets/icons/placeholder.png",
-    "assets/icons/placeholder.png",
-    "assets/icons/placeholder.png",
+    "assets/icons/language.png",
+    "assets/icons/language.png",
+    "assets/icons/language.png",
+    "assets/icons/language.png",
+    "assets/icons/language.png",
+    "assets/icons/language.png",
+    "assets/icons/language.png",
   ];
 
   final List<String> cards = [
