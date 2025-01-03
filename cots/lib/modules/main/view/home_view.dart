@@ -4,14 +4,14 @@ import '../controller/main_controller.dart';
 
 class HomeView extends StatelessWidget {
   final List<String> icons = [
-    "assets/icons/topup.png",
-    "assets/icons/pay.png",
-    "assets/icons/explore.png",
-    "assets/icons/goride.png",
-    "assets/icons/gocar.png",
-    "assets/icons/gofood.png",
-    "assets/icons/gosend.png",
-    "assets/icons/more.png",
+    "assets/icons/language.png",
+    "assets/icons/placeholder.png",
+    "assets/icons/placeholder.png",
+    "assets/icons/placeholder.png",
+    "assets/icons/placeholder.png",
+    "assets/icons/placeholder.png",
+    "assets/icons/placeholder.png",
+    "assets/icons/placeholder.png",
   ];
 
   final List<String> cards = [
@@ -30,7 +30,7 @@ class HomeView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
+            // Search Bar
             TextField(
               onChanged: controller.updateSearchText,
               decoration: InputDecoration(
@@ -46,7 +46,7 @@ class HomeView extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-
+            // Grid Icons
             GridView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
@@ -67,11 +67,17 @@ class HomeView extends StatelessWidget {
                         color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      child: Image.asset(icons[index]),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(25),
+                        child: Image.asset(
+                          icons[index],
+                          fit: BoxFit.cover, // Menyesuaikan gambar dengan container
+                        ),
+                      ),
                     ),
                     SizedBox(height: 5),
                     Text(
-                      icons[index].split('/').last.split('.').first.capitalizeFirst!,
+                      "Placeholder", // Nama default untuk ikon
                       style: TextStyle(fontSize: 12),
                     ),
                   ],
@@ -80,7 +86,7 @@ class HomeView extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-
+            // Promotions
             Text(
               "Promotions",
               style: TextStyle(
@@ -90,7 +96,7 @@ class HomeView extends StatelessWidget {
             ),
             SizedBox(height: 10),
 
-
+            // Promotions Cards
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
@@ -99,7 +105,7 @@ class HomeView extends StatelessWidget {
                 return Container(
                   margin: EdgeInsets.only(bottom: 10),
                   width: MediaQuery.of(context).size.width,
-                  height: 400,
+                  height: 150,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
